@@ -1,0 +1,68 @@
+<!-- Hero Header Section -->
+<section class="works-hero-section" id="work">
+  <div class="hero-left">
+    <span class="section-label">Selected Work...</span>
+    <h2 class="hero-title">Projects<span class="gold-dot">.</span></h2>
+  </div>
+
+  <div class="hero-divider"></div>
+
+  <div class="hero-center">
+    <p class="hero-description">
+      A selection of digital products<br />
+      designed and developed with<br />
+      passion, precision and purpose.
+    </p>
+  </div>
+</section>
+
+<!-- Projects Grid -->
+<main class="projects-grid">
+  @for (project of filteredProjects(); track project.number) {
+  <a [routerLink]="['/projects', project.slug]" target="_blank" class="project-card">
+    <div class="card-meta">
+      <span class="card-number">{{ project.number }} <span class="gold-pipe">|</span></span>
+      <h3 class="card-title">{{ project.title }}</h3>
+      <div class="card-tags">
+        <span class="square-icon">■</span>
+        @for (tag of project.tags; track tag; let last = $last) {
+        {{ tag }}
+        @if (!last) {
+        <span class="tag-pipe">|</span>
+        }
+        }
+      </div>
+    </div>
+
+    <div class="card-image-wrapper">
+      <!-- Photo cards -->
+      @if (project.imageType === 'photo') {
+      <img [src]="project.imageUrl" [alt]="project.imageAlt" class="card-img" />
+      }
+
+      <!-- Monogram card (Baleh Haus) -->
+      @if (project.imageType === 'monogram') {
+      <img [src]="project.imageUrl" [alt]="project.imageAlt" class="card-img" />
+      <div class="monogram-overlay">
+        <span>B</span>
+        <span>B</span>
+      </div>
+      }
+    </div>
+  </a>
+  }
+</main>
+
+<!-- Footer Bar -->
+<footer class="works-footer">
+  <div class="footer-line"></div>
+  <div class="footer-content">
+    <span class="footer-left">Let's Create Somthing Great</span>
+    <a href="https://wa.me/212675160851?text=Hello%20Amine,%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20connect!"
+      class="footer-right" target="_blank" rel="noopener noreferrer">
+      Let's Talk
+      <span class="arrow">&rarr;</span>
+    </a>
+
+  </div>
+</footer>
