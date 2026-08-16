@@ -1,0 +1,23 @@
+<div class="project-details-page" *ngIf="project() as currentProject">
+  <div class="container">
+    <!-- 01 Navigation -->
+    <app-project-nav></app-project-nav>
+
+    <!-- 02 Hero Media Preview -->
+    <app-project-hero [project]="currentProject"></app-project-hero>
+
+    <!-- 03 Project Introduction -->
+    <app-project-intro [project]="currentProject"></app-project-intro>
+
+    <!-- 04 Overview / Challenge / Solution & Feature Showcase -->
+    <app-project-overview [project]="currentProject"></app-project-overview>
+
+    <!-- 05 & 06 Key Features & Technologies Matrix -->
+    <app-project-features-tech [project]="currentProject"></app-project-features-tech>
+
+    <!-- 07 Project Gallery -->
+    <app-project-gallery [project]="currentProject"></app-project-gallery>
+
+
+  </div>
+</div>
