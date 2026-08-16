@@ -1,0 +1,162 @@
+/* --bg-color: #f7f3eb; */
+
+.father {
+    position: relative;
+    background-color: #F2ECE2;
+    color: black;
+    font-family: 'Newsreader', serif;
+    min-height: 100vh;
+    display: flex;
+    padding: 5rem 2rem;
+    -webkit-font-smoothing: antialiased;
+    width: 100vw;
+}
+
+.about-container {
+    max-width: 1300px;
+    width: 100%;
+    margin-top: 5.5rem;
+    margin-left: 4rem;
+}
+
+.headline {
+    font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+}
+
+.gold-line {
+    width: 100px;
+    height: 1.5px;
+    background-color: #c8a870;
+    vertical-align: middle;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.paragraph {
+    font-size: clamp(1.2rem, 2.2vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.55;
+    margin-bottom: 2.8rem;
+    margin-left: 0.5rem;
+    color: gray;
+}
+
+.paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* @media (max-width: 768px) {
+    body {
+        padding: 3rem 1.5rem;
+    }
+
+    .headline {
+        margin-bottom: 2.5rem;
+    }
+
+    .paragraph {
+        margin-bottom: 2rem;
+    }
+
+    .gold-line {
+        width: 45px;
+    }
+} */
+
+.contact-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 120px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    background: transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+    border-bottom-color: #c8a870;
+    transform: translateY(-2px);
+}
+
+.contact-btn__icon {
+    width: clamp(18px, 2.2vw, 24px);
+    height: clamp(18px, 2.2vw, 24px);
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover .contact-btn__icon {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .contact-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 925px) {
+    .paragraph {
+        font-size: 28px;
+    }
+
+    .contact-btn {
+        right: 60px;
+        bottom: 50px;
+    }
+
+    .father {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        padding-left: 0.5px;
+    }
+}
+
+@media (max-width: 954px) {
+    .about-container {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 840px) {
+    .paragraph {
+        font-size: 24px;
+    }
+
+    .contact-btn {
+        right: 60px;
+        bottom: 100px;
+    }
+
+    .about-container {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-btn {
+        bottom: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+    .paragraph {
+        text-align: center;
+        font-size: 20px;
+    }
+
+
+}
