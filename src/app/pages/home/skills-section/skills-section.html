@@ -1,0 +1,548 @@
+<section class="skills" #skillsSection id="skills">
+
+  <header class="skills__header" #header>
+    <h2 class="skills__title">Skills &amp; Tools</h2>
+    <div class="skills__diamond">
+      <span class="skills__diamond-line"></span>
+      <span class="skills__diamond-center">◆</span>
+      <span class="skills__diamond-line"></span>
+    </div>
+    <p class="skills__subtitle">A blend of creativity, logic, and technology<br>to build exceptional digital experiences
+    </p>
+  </header>
+
+  <!-- ── Main Layout ── -->
+  <div class="skills__layout" #layout>
+
+    <!-- ── SVG Connection Lines with glowing cable design and connector nodes ── -->
+    <svg class="skills__connections" #connectionsSvg viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <!-- Gold Radial Gradient for Sparkles -->
+        <radialGradient id="sparkle" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFF" stop-opacity="1" />
+          <stop offset="40%" stop-color="#D4B97A" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#C5A467" stop-opacity="0" />
+        </radialGradient>
+
+        <!-- Gold Linear Gradient for Card SVGs on Hover -->
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#C8952A" />
+          <stop offset="50%" stop-color="#F5D78A" />
+          <stop offset="100%" stop-color="#C8952A" />
+        </linearGradient>
+
+        <!-- Glow Filter for Cable and Nodes -->
+        <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+
+        <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="8" result="blur1" />
+          <feGaussianBlur stdDeviation="3" result="blur2" />
+          <feMerge>
+            <feMergeNode in="blur1" />
+            <feMergeNode in="blur2" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Connection Cables (Dual-layer stroke for realistic neon/glow cable effect) -->
+
+      <!-- Path 1 (Top Left) -->
+      <path class="skills__path-glow" d="M422,262 C380,262 380,220 340,220" fill="none" stroke="#b29b7d"
+        stroke-width="5" filter="url(#glowFilter)" opacity="0.5" />
+      <path class="skills__path" #connectionPath1 d="M422,262 C380,262 380,220 340,220" fill="none" />
+
+      <!-- Path 2 (Top Right) -->
+      <path class="skills__path-glow" d="M578,262 C620,262 620,220 660,220" fill="none" stroke="#b29b7d"
+        stroke-width="5" filter="url(#glowFilter)" opacity="0.5" />
+      <path class="skills__path" #connectionPath2 d="M578,262 C620,262 620,220 660,220" fill="none" />
+
+      <!-- Path 3 (Bottom Left) -->
+      <path class="skills__path-glow" d="M422,418 C380,418 380,460 340,460" fill="none" stroke="#b29b7d"
+        stroke-width="5" filter="url(#glowFilter)" opacity="0.5" />
+      <path class="skills__path" #connectionPath3 d="M422,418 C380,418 380,460 340,460" fill="none" />
+
+      <!-- Path 4 (Bottom Right) -->
+      <path class="skills__path-glow" d="M578,418 C620,418 620,460 660,460" fill="none" stroke="#b29b7d"
+        stroke-width="5" filter="url(#glowFilter)" opacity="0.5" />
+      <path class="skills__path" #connectionPath4 d="M578,418 C620,418 620,460 660,460" fill="none" />
+
+      <!-- Glowing Cable Connector Buttons/Nodes (Core Side) -->
+      <circle class="skills__node-glow" cx="422" cy="262" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+      <circle class="skills__node-glow" cx="578" cy="262" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+      <circle class="skills__node-glow" cx="422" cy="418" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+      <circle class="skills__node-glow" cx="578" cy="418" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+
+      <!-- Glowing Cable Connector Buttons/Nodes (Card Side) -->
+      <circle class="skills__node-glow" cx="340" cy="220" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+      <circle class="skills__node-glow" cx="660" cy="220" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+      <circle class="skills__node-glow" cx="340" cy="460" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+      <circle class="skills__node-glow" cx="660" cy="460" r="7" fill="#FFF" stroke="#ffb300" stroke-width="2.5"
+        filter="url(#intenseGlow)" />
+
+      <!-- Sparkle particles along the paths -->
+      <!-- <circle class="skills__sparkle" id="sparkle1" r="5" fill="url(#sparkle)" filter="url(#glowFilter)" />
+      <circle class="skills__sparkle" id="sparkle2" r="5" fill="url(#sparkle)" filter="url(#glowFilter)" />
+      <circle class="skills__sparkle" id="sparkle3" r="5" fill="url(#sparkle)" filter="url(#glowFilter)" />
+      <circle class="skills__sparkle" id="sparkle4" r="5" fill="url(#sparkle)" filter="url(#glowFilter)" /> -->
+    </svg>
+
+    <!-- ── Central Dark Circle ── -->
+    <div class="skills__core" #core>
+      <div class="skills__core-outer-ring"></div>
+      <div class="skills__core-inner-ring">
+        <!-- Orbiting particles on first ring -->
+        <span class="skills__core-orbit-particle skills__core-orbit-particle--1"></span>
+        <span class="skills__core-orbit-particle skills__core-orbit-particle--2"></span>
+      </div>
+      <div class="skills__core-thired-ring">
+        <!-- Orbiting particles on second ring -->
+        <span class="skills__core-orbit-particle skills__core-orbit-particle--3"></span>
+      </div>
+      <div class="skills__core-ford-ring">
+        <!-- Orbiting particles on third ring -->
+        <span class="skills__core-orbit-particle skills__core-orbit-particle--4"></span>
+        <span class="skills__core-orbit-particle skills__core-orbit-particle--5"></span>
+      </div>
+      <div class="skills__core-five-ring">
+        <!-- Orbiting particles on fourth ring -->
+        <span class="skills__core-orbit-particle skills__core-orbit-particle--6"></span>
+      </div>
+      <div class="skills__core-face">
+        <div class="skills__core-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>
+        </div>
+        <span class="skills__core-label">CORE</span>
+        <span class="skills__core-label">EXPERTISE</span>
+        <span class="skills__core-role">Full-Stack Developer</span>
+      </div>
+      <div class="skills__core-glow"></div>
+    </div>
+
+    <!-- ── Card: Front-End (Top Left) ── -->
+    <article class="skills__card skills__card--tl" #skillCard data-depth="0.04">
+      <div class="skills__card-surface">
+        <div class="skills__card-head">
+          <div class="skills__card-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="skills__card-title">Front-End</h3>
+            <span class="skills__card-sub">Development</span>
+          </div>
+        </div>
+        <div class="skills__card-body">
+          <ul class="skills__card-list">
+            <li class="skills__card-item" #skillItem>HTML5</li>
+            <li class="skills__card-item" #skillItem>CSS3</li>
+            <li class="skills__card-item" #skillItem>TypeScript</li>
+            <li class="skills__card-item" #skillItem>Angular</li>
+            <li class="skills__card-item" #skillItem>Tailwind CSS</li>
+          </ul>
+
+          <!-- Drawing of browser / code editor vector -->
+          <div class="skills__card-illustration" style="transform: translateY(-19px);">
+            <svg class="frontend-illustration" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Browser window -->
+              <rect x="25" y="25" width="125" height="100" rx="5" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Browser top bar -->
+              <path d="M25 48H150" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Browser dots -->
+              <circle cx="37" cy="36" r="2.5" fill="currentColor" />
+              <circle cx="45" cy="36" r="2.5" fill="currentColor" />
+              <circle cx="53" cy="36" r="2.5" fill="currentColor" />
+
+              <!-- Left layout panel -->
+              <rect x="38" y="60" width="30" height="48" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <!-- Right content -->
+              <rect x="78" y="60" width="55" height="8" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <rect x="78" y="76" width="45" height="6" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <rect x="78" y="90" width="35" height="6" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <!-- Code brackets -->
+              <path d="M88 112L98 120L108 112" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Connection -->
+              <path d="M150 77H172" stroke="currentColor" stroke-width="2" />
+
+              <!-- Code node -->
+              <circle cx="182" cy="77" r="9" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Code symbol -->
+              <path d="M178 73L174 77L178 81" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <path d="M186 73L190 77L186 81" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Small connection dots -->
+              <circle cx="172" cy="77" r="3" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+        <div class="skills__card-node skills__card-node--right"></div>
+      </div>
+    </article>
+
+    <!-- ── Card: Back-End (Top Right) ── -->
+    <article class="skills__card skills__card--tr" #skillCard data-depth="0.06">
+      <div class="skills__card-surface">
+        <div class="skills__card-head">
+          <div class="skills__card-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+              <circle cx="8" cy="6" r="2" />
+              <circle cx="12" cy="12" r="2" />
+              <circle cx="16" cy="18" r="2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="skills__card-title">Back-End</h3>
+            <span class="skills__card-sub">Development</span>
+          </div>
+        </div>
+        <div class="skills__card-body">
+          <ul class="skills__card-list">
+            <li class="skills__card-item" #skillItem>PHP</li>
+            <li class="skills__card-item" #skillItem>Node.js</li>
+            <li class="skills__card-item" #skillItem>Express.js</li>
+            <li class="skills__card-item" #skillItem>REST API</li>
+          </ul>
+
+          <!-- Drawing of server / back-end vector -->
+          <div class="skills__card-illustration">
+            <svg class="backend-illustration" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Server 1 -->
+              <rect x="35" y="28" width="105" height="28" rx="5" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Server 2 -->
+              <rect x="35" y="62" width="105" height="28" rx="5" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Server 3 -->
+              <rect x="35" y="96" width="105" height="28" rx="5" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Server indicators -->
+              <circle cx="48" cy="42" r="3" fill="currentColor" />
+              <circle cx="48" cy="76" r="3" fill="currentColor" />
+              <circle cx="48" cy="110" r="3" fill="currentColor" />
+
+              <!-- Server lines -->
+              <path d="M62 39H125" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+              <path d="M62 73H125" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+              <path d="M62 107H125" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+              <!-- Connection -->
+              <path d="M140 76H158" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Cloud -->
+              <path d="M158 78
+                   C158 69 165 63 174 63
+                   C179 63 184 66 186 70
+                   C188 69 190 68 193 68
+                   C200 68 205 73 205 80
+                   C205 87 200 92 193 92
+                   H166
+                   C161 92 158 87 158 82Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+
+              <!-- Cloud connection nodes -->
+              <circle cx="153" cy="76" r="4" stroke="currentColor" stroke-width="2" />
+
+              <circle cx="174" cy="63" r="3" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+        <div class="skills__card-node skills__card-node--left"></div>
+      </div>
+    </article>
+
+    <!-- ── Card: UI/UX (Bottom Left) ── -->
+    <article class="skills__card skills__card--bl" #skillCard data-depth="0.05">
+      <div class="skills__card-surface">
+        <div class="skills__card-head">
+          <div class="skills__card-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
+              <path d="M12 8V16" />
+              <path d="M8 12H16" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="skills__card-title">UI / UX</h3>
+            <span class="skills__card-sub">Design</span>
+          </div>
+        </div>
+        <div class="skills__card-body">
+          <ul class="skills__card-list">
+            <li class="skills__card-item" #skillItem>Figma</li>
+            <li class="skills__card-item" #skillItem>Framer</li>
+            <li class="skills__card-item" #skillItem>Adobe XD</li>
+          </ul>
+
+          <!-- Drawing of UI/UX design vector -->
+          <div class="skills__card-illustration">
+            <svg class="uiux-illustration" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Design window -->
+              <rect x="25" y="25" width="125" height="95" rx="4" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Top bar -->
+              <path d="M25 45H150" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Window dots -->
+              <circle cx="36" cy="35" r="2.5" fill="currentColor" />
+              <circle cx="44" cy="35" r="2.5" fill="currentColor" />
+              <circle cx="52" cy="35" r="2.5" fill="currentColor" />
+
+              <!-- Layout blocks -->
+              <rect x="38" y="57" width="32" height="45" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <rect x="80" y="57" width="52" height="7" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <rect x="80" y="72" width="42" height="6" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <rect x="80" y="86" width="32" height="6" rx="2" stroke="currentColor" stroke-width="2" />
+
+              <!-- Typography A -->
+              <text x="48" y="87" font-size="28" font-family="Georgia, serif" fill="currentColor">
+                A
+              </text>
+
+              <!-- Pen -->
+              <path d="M132 118L169 81" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+
+              <path d="M169 81L177 89" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+
+              <path d="M132 118L129 126L137 123L132 118Z" stroke="currentColor" stroke-width="2" />
+
+              <!-- Pen nib -->
+              <path d="M129 126L132 118" stroke="currentColor" stroke-width="2" />
+
+              <!-- Small design nodes -->
+              <circle cx="177" cy="89" r="5" stroke="currentColor" stroke-width="2" />
+
+              <circle cx="187" cy="99" r="5" stroke="currentColor" stroke-width="2" />
+
+              <!-- Connection -->
+              <path d="M177 89L187 99" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="skills__card-node skills__card-node--right"></div>
+      </div>
+    </article>
+
+    <!-- ── Card: Database (Bottom Right) ── -->
+    <article class="skills__card skills__card--br" #skillCard data-depth="0.03">
+      <div class="skills__card-surface">
+        <div class="skills__card-head">
+          <div class="skills__card-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M3 5V19C3 20.66 7.03 22 12 22C16.97 22 21 20.66 21 19V5" />
+              <path d="M3 12C3 13.66 7.03 15 12 15C16.97 15 21 13.66 21 12" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="skills__card-title">Database</h3>
+            <span class="skills__card-sub">Management</span>
+          </div>
+        </div>
+        <div class="skills__card-body">
+          <ul class="skills__card-list">
+            <li class="skills__card-item" #skillItem>PostgreSQL</li>
+            <li class="skills__card-item" #skillItem>MySQL</li>
+            <li class="skills__card-item" #skillItem>MongoDB</li>
+          </ul>
+
+          <!-- Drawing of DB cylinder / database vector -->
+          <div class="skills__card-illustration">
+            <svg class="database-illustration" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Database -->
+              <ellipse cx="82" cy="35" rx="45" ry="15" stroke="currentColor" stroke-width="2.5" />
+
+              <!-- Database body -->
+              <path d="M37 35V105C37 113.3 57.1 120 82 120C106.9 120 127 113.3 127 105V35" stroke="currentColor"
+                stroke-width="2.5" />
+
+              <!-- Database middle lines -->
+              <path d="M37 58C37 66.3 57.1 73 82 73C106.9 73 127 66.3 127 58" stroke="currentColor"
+                stroke-width="2.5" />
+
+              <path d="M37 82C37 90.3 57.1 97 82 97C106.9 97 127 90.3 127 82" stroke="currentColor"
+                stroke-width="2.5" />
+
+              <!-- Connection line -->
+              <path d="M127 77H155" stroke="currentColor" stroke-width="2" />
+
+              <!-- Connection branches -->
+              <path d="M155 77C165 77 165 48 180 48" stroke="currentColor" stroke-width="2" />
+
+              <path d="M155 77H180" stroke="currentColor" stroke-width="2" />
+
+              <path d="M155 77C165 77 165 106 180 106" stroke="currentColor" stroke-width="2" />
+
+              <!-- Nodes -->
+              <circle cx="186" cy="48" r="6" stroke="currentColor" stroke-width="2.5" />
+
+              <circle cx="186" cy="77" r="6" stroke="currentColor" stroke-width="2.5" />
+
+              <circle cx="186" cy="106" r="6" stroke="currentColor" stroke-width="2.5" />
+            </svg>
+          </div>
+        </div>
+        <div class="skills__card-node skills__card-node--left"></div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ── Tools & Workflow Dock ── -->
+  <div class="skills__dock" #dock>
+    <div class="skills__dock-title-container">
+      <span class="skills__dock-line"></span>
+      <h3 class="skills__dock-title">TOOLS &amp; WORKFLOW</h3>
+      <span class="skills__dock-line"></span>
+    </div>
+    <div class="skills__dock-bar" #dockBar>
+
+      <!-- VS Code -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--vscode">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2.5L7.5 9.5l-4.5-3.5v12l4.5-3.5 8.5 7 5-2.5V5z" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">VS Code</span>
+      </div>
+
+      <!-- Figma -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--figma">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#F24E1E" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 5a3 3 0 1 1 6 0v3H8V5z" />
+            <path d="M8 12a3 3 0 1 1 6 0v-3H8v3z" />
+            <path d="M8 19a3 3 0 1 1 3-3v3H8z" />
+            <path d="M16 12a3 3 0 1 1 3-3v3h-3z" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">Figma</span>
+      </div>
+
+      <!-- Framer -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--framer">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#0055FF" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 16V9h14V2H5l14 14H5z" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">Framer</span>
+      </div>
+
+      <!-- Git -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--git">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#F05032" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="18" r="3" />
+            <circle cx="6" cy="6" r="3" />
+            <path d="M13 6h3a2 2 0 012 2v7" />
+            <line x1="6" y1="9" x2="6" y2="21" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">Git</span>
+      </div>
+
+      <!-- GitHub -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--github">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#181717" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">GitHub</span>
+      </div>
+
+      <!-- Postman -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--postman">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6C37" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">Postman</span>
+      </div>
+
+      <!-- Docker -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--docker">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#2496ED" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="14" width="20" height="6" rx="2" />
+            <rect x="5" y="8" width="4" height="4" />
+            <rect x="10" y="8" width="4" height="4" />
+            <rect x="15" y="8" width="4" height="4" />
+            <path d="M2,14 C6,10 18,10 22,14" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">Docker</span>
+      </div>
+
+      <!-- Linux -->
+      <div class="skills__dock-item" #toolItem>
+        <div class="skills__dock-icon-wrap skills__dock-icon-wrap--linux">
+          <svg class="skills__dock-icon" viewBox="0 0 24 24" fill="none" stroke="#FCC624" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M12 2C8 2 6 5 6 9C6 11 7 13 8 14C8 16 7 18 6 19C7 20 10 20 12 20C14 20 17 20 18 19C17 18 16 16 16 14C17 13 18 11 18 9C18 5 16 2 12 2Z" />
+            <circle cx="10" cy="8" r="1" />
+            <circle cx="14" cy="8" r="1" />
+          </svg>
+        </div>
+        <span class="skills__dock-label">Linux</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
